@@ -1,6 +1,15 @@
-\begin{document}
-\bf{General} 
+\documentclass{article}
 
+\usepackage{amsmath}
+\usepackage{setspace}
+
+
+\setlength{\parindent}{0pt}
+\doublespacing
+
+\begin{document}
+
+\section{General} 
 Divisors of n: $\sigma (n) \le \sqrt[3]{n}$. 
 
 $\sum_{i1}^{n}{i}=\frac{n(n+1)}{2}$ ;
@@ -14,7 +23,7 @@ Euler's totient function:
 $\phi(n) = n \cdot (1 - \frac{1}{p_1}) \cdot (1 - \frac{1}{p_2}) \cdot \cdots \cdot (1 - \frac{1}{p_k})$;
 $\sum_{d|n}{\phi(n) = n}$
 
-\noindent\bf{Fibonacci Numbers}
+\section{Fibonacci Numbers}
 
 $F_{-i}=(-1)^{i-1}F_i$;
 $GCD(F_m,F_n) = F_{GCD(m,n)}$
@@ -25,16 +34,19 @@ Additive rules:
 $F_{n+k}=F_{k}F_{n+1} + F_{k-1}F_{n}$ ;
 $F_{2n}=F_{n}F_{n+1}+F_{n-1}F_{n}$
 
-\noindent\bf{Dopatine Equation}
+\bf{Dopatine Equation}
 
 Explicit solution: 
+\begin{align}
 \begin{cases}
-	x_0 \equiv (c/g)(a/g)^{-1} \pmod {b/g} \\ 
+	x_0 \equiv (c/g)(a/g)^{-1} \pmod {b/g} \\
 	y_0 = \frac{c-a \cdot x_0}{b}
 \end{cases}
+& \quad \text{and} \quad
 \begin{cases}
 	x = x_0 + k \cdot \frac{b}{g} \\
 	y = y_0 - k \cdot \frac{a}{g}
 \end{cases}
+\end{align}
 
 \end{document}
