@@ -55,21 +55,3 @@ int hopcroftKarp(vector<vector<int>>& g, vector<int>& btoa) {
 			res += dfs(a, 0, g, btoa, A, B);
 	}
 }
-
-signed main() {
-    int n,m,p;
-    cin >> n >> m >> p;
-    vector<vector<int>> g(n + 1,vector<int>());
-    while (p--) {
-        int u,v;
-        cin >> u >> v;
-        g[u].push_back(v);
-    }
-    vector<int> btoa(m + 1, -1); 
-    cout << hopcroftKarp(g, btoa) << '\n';
-    
-    /// Find all matching, btoa[i] is the left side of i(The right side)
-    for (int i = 0; i < btoa.size(); i++)  
-        if (btoa[i] != -1)    
-            cout << btoa[i] << "->" <<  i << "\n";
-}
