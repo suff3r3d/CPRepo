@@ -1,3 +1,6 @@
 a.exe
 .vscode/
 *.pdf
+
+notebook-include/**/
+!notebook-include/notebook.pdf
