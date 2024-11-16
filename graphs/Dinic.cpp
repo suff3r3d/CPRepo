@@ -64,25 +64,3 @@ struct Dinic
 	}
 	bool leftOfMinCut(int a) { return lvl[a] != 0; }
 };
-
-signed main()
-{
-	cin >> n >> m >> s >> t;
-	Dinic dinic(n + 1);
-	for (int i = 1; i <= m; i++)
-	{
-		int u, v, C;
-		cin >> u >> v >> C;
-		dinic.addEdge(u, v, C);
-		c[u][v] = 1;
-	}
-	cout << dinic.calc(s, t) << '\n';
-
-	/// Find all edges in min-cut, can be optimized using edges list
-	for (int i = 1; i <= n; i++)
-		for (int j = 1; j <= n; j++)
-		{
-			if (c[i][j] && dinic.leftOfMinCut(i) && !dinic.leftOfMinCut(j))
-				cout << i << " " << j << '\n';
-		}
-}

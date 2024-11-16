@@ -7,10 +7,6 @@ int tin[N], low[N];
 int dfsTime=0;
 
 int SCCCount=0;
-/*
-memset(tin,0,sizeof tin);
-memset(onStack,false,sizeof onStack);
-*/
 
 void dfs(int u) {
     onStack[u]=true;st.push(u);
