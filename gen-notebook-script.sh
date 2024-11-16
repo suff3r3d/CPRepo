@@ -10,11 +10,14 @@ cp gen.cpp ./notebook-include
 cp rng.cpp ./notebook-include
 
 rm ./notebook-include/graphs/EdmondKarp.cpp
+rm ./notebook-include/graphs/Dinic.cpp
 rm ./notebook-include/graphs/tree-diameter.cpp
 rm ./notebook-include/string/hashing.cpp
 rm ./notebook-include/string/bin-trie.cpp
+rm ./notebook-include/graphs/DAG.cpp
+rm ./notebook-include/graphs/hld-2.cpp
 
 cd notebook-include
 notebook-generator -c 2 -a "chungdinh, distiled, 5onyy" .
-# mv notebook.pdf ..
+mv notebook.pdf ..
 cd ..
