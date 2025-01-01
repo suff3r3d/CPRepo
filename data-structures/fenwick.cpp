@@ -4,7 +4,8 @@ class fenwick {
   int n;
 
 public:
-  fenwick() {}
+  // fenwick() {}
+  // shouldn't allow this
 
   fenwick(int n_) : n(n_) {
     // check initial value
@@ -19,9 +20,23 @@ public:
     return q;
   }
 
+  T query(int l, int r) {
+    return query(r) - query(l - 1);
+  }
+
   void update(int r, T del) {
     for (; r <= n; r += (r & -r)) {
       a[r] += del; //check update rule
     }
+  }
+
+  // difference array
+  T query_diff(int v) {
+    return query(v);
+  }
+
+  void update_diff(int l, int r, T val) {
+    update(l, val);
+    if (r < n) update(r + 1, -val); // check rule
   }
 };
